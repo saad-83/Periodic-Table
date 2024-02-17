@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Periodic Table</title>
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.heading{
+    position: relative;
+    color: black;
+    font-size: 70px;
+    -webkit-text-stroke: 0.3vw #080808;
+    color: black;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+.heading::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #050505;
+    -webkit-text-stroke: 0vw #01fe87;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+td{
+    color: white;
+    text-align: center;
+    width: 6vw;
+    /* border: 1px solid rgb(4, 172, 18); */
+    font-weight: 500;
+    size: 500px;
+}
+.color1{
+    background-color: #00b6bc;
+}
+.color2{
+    background-color: #329090;
+}
+.color3{
+    background-color: #1b67c9;
+}
+.color4{
+    background-color: #a166a0;
+}
+.color5{
+    background-color: #f5b659;
+}
+.color6{
+    background-color: #00b6bc;
+}
+.color7{
+    background-color: #00b6bc;
+}
+.color8{
+    background-color: #00b6bc;
+}
+.color9{
+    background-color: #59cf6e;
+}
+.color10{
+    background-color: #329090;
+}
+.color11{
+    background-color: #1b67c9;
+}
+.color12{
+    background-color: #a166a0;
+}
+.color13{
+    background-color: #f5b659;
+}
+.color14{
+    background-color: #f5b659;
+}
+.color15{
+    background-color: #00b6bc;
+}
+.color16{
+    background-color: #00b6bc;
+}
+.color17{
+    background-color: #59cf6e;
+}
+.color18{
+    background-color: #329090;
+}
+.color19{
+    background-color: #1b67c9;
+}
+.color20{
+    background-color: #a166a0;
+}
+.color21{
+    background-color: #f53951;
+}
+.color22{
+    background-color: #f53951;
+}
+.color23{
+    background-color: #f53951;
+}
+.color24{
+    background-color: #f53951;
+}
+.color25{
+    background-color: #f53951;
+}
+.color26{
+    background-color: #f53951;
+}
+.color27{
+    background-color: #f53951;
+}
+.color28{
+    background-color: #f53951;
+}
+.color29{
+    background-color: #f53951;
+}
+.color30{
+    background-color: #f53951;
+}
+.color31{
+    background-color: #f36d4a;
+}
+.color32{
+    background-color: #f5b659;
+}
+.color33{
+    background-color: #f5b659;
+}
+.color34{
+    background-color: #00b6bc;
+}
+.color35{
+    background-color: #59cf6e;
+}
+.color36{
+    background-color: #1b67c9;
+}
+.color37{
+    background-color: #1b67c9;
+}
+.color38{
+    background-color: #a166a0;
+}
+.color39{
+    background-color: #f53951;
+}
+.color40{
+    background-color: #f53951;
+}
+.color41{
+    background-color: #f53951;
+}
+.color42{
+    background-color: #f53951;
+}
+.color43{
+    background-color: #f53951;
+}
+.color44{
+    background-color: #f53951;
+}
+.color45{
+    background-color: #f53951;
+}
+.color46{
+    background-color: #f53951;
+}
+.color47{
+    background-color: #f53951;
+}
+.color48{
+    background-color: #f53951;
+}
+.color49{
+    background-color: #f36d4a;
+}
+.color50{
+    background-color: #f36d4a;
+}
+.color51{
+    background-color: #f5b659;
+}
+.color52{
+    background-color: #f5b659;
+}
+.color53{
+    background-color: #59cf6e;
+}
+.color54{
+    background-color: #00b6bc;
+}
+.color55{
+    background-color: #1b67c9;
+}
+.color56{
+    background-color: #a166a0;
+}
+.color57{
+    background-color: #004e75;
+}
+.color58{
+    background-color: #f53951;
+}
+.color59{
+    background-color: #f53951;
+}
+.color60{
+    background-color: #f53951;
+}
+.color61{
+    background-color: #f53951;
+}
+.color62{
+    background-color: #f53951;
+}
+.color63{
+    background-color: #f53951;
+}
+.color64{
+    background-color: #f53951;
+}
+.color65{
+    background-color: #f53951;
+}
+.color66{
+    background-color: #f53951;
+}
+.color67{
+    background-color: #f36d4a;
+}
+.color68{
+    background-color: #f36d4a;
+}
+.color69{
+    background-color: #f36d4a;
+}
+.color70{
+    background-color: #f5b659;
+}
+.color71{
+    background-color: #59cf6e;
+}
+.color72{
+    background-color: #00b6bc;
+}
+.color73{
+    background-color: #1b67c9;
+}
+.color74{
+    background-color: #a166a0;
+}
+.color75{
+    background-color: #572e56;
+}
+.color76{
+    background-color: #f53951;
+}
+.color77{
+    background-color: #f53951;
+}
+.color77{
+    background-color: #f53951;
+}
+.color78{
+    background-color: #f53951;
+}
+.color79{
+    background-color: #f53951;
+}
+.color80{
+    background-color: #f53951;
+}
+.color81{
+    background-color: #f53951;
+}
+.color82{
+    background-color: #f53951;
+}
+.color83{
+    background-color: #f53951;
+}
+.color84{
+    background-color: #f53951;
+}
+.color85{
+    background-color: #859998;
+}
+.color86{
+    background-color: #859998;
+}
+.color87{
+    background-color: #859998;
+}
+.color88{
+    background-color: #859998;
+}
+.color89{
+    background-color: #859998;
+}
+.color90{
+    background-color: #859998;
+}
+.color91{
+    background-color: #004e75;
+}
+.color92{
+    background-color: #004e75;
+}
+.color93{
+    background-color: #004e75;
+}
+.color94{
+    background-color: #004e75;
+}
+.color95{
+    background-color: #004e75;
+}
+.color96{
+    background-color: #004e75;
+}
+.color97{
+    background-color: #004e75;
+}
+.color98{
+    background-color: #004e75;
+}
+.color99{
+    background-color: #004e75;
+}
+.color100{
+    background-color: #004e75;
+}
+.color101{
+    background-color: #004e75;
+}
+.color102{
+    background-color: #004e75;
+}
+.color103{
+    background-color: #004e75;
+}
+.color104{
+    background-color: #004e75;
+}
+.color105{
+    background-color: #572e56;
+}
+.color106{
+    background-color: #572e56;
+}.color107{
+    background-color: #572e56;
+}
+.color108{
+    background-color: #572e56;
+}
+.color109{
+    background-color: #572e56;
+}
+.color110{
+    background-color: #572e56;
+}
+.color111{
+    background-color: #572e56;
+}
+.color112{
+    background-color: #572e56;
+}
+.color113{
+    background-color: #572e56;
+}
+.color114{
+    background-color: #572e56;
+}
+.color115{
+    background-color: #572e56;
+}
+.color116{
+    background-color: #572e56;
+}
+.color117{
+    background-color: #572e56;
+}
+.color118{
+    background-color: #572e56;
+}
+</style>
+
+<body>
+    <center>
+        <div class="heading">The Periodic Table</div>
+    </center>
+    <br><br>
+    <table>
+        <tr>
+            <td class="color1">1<br>H</td>
+            <td colspan="16"><br></td>
+            <td class="color2">2<br>He</td>
+        </tr>
+
+        <tr>
+            <td class="color3">3<br>Li</td>
+            <td class="color4">4<br>Be</td>
+            <td colspan="10"><br></td>
+            <td class="color5">5<br>B</td>
+            <td class="color6">6<br>C</td>
+            <td class="color7">7<br>N</td>
+            <td class="color8">8<br>O</td>
+            <td class="color9">9<br>F</td>
+            <td class="color10">10<br>Ne</td>
+        </tr>
+
+        <tr>
+            <td class="color11">11<br>Na</td>
+            <td class="color12">12<br>Mg</td>
+            <td colspan="10"><br></td>
+            <td class="color13">13<br>Al</td>
+            <td class="color14">14<br>Si</td>
+            <td class="color15">15<br>P</td>
+            <td class="color16">16<br>S</td>
+            <td class="color17">17<br>Cl</td>
+            <td class="color18">18<br>Ar</td>
+        </tr>
+
+        <tr>
+            <td class="color19">19<br>K</td>
+            <td class="color20">20<br>Ca</td>
+            <td class="color21">21<br>Sc</td>
+            <td class="color22">22<br>Ti</td>
+            <td class="color23">23<br>V</td>
+            <td class="color24">24<br>Cr</td>
+            <td class="color25">25<br>Mn</td>
+            <td class="color26">26<br>Fe</td>
+            <td class="color27">27<br>Co</td>
+            <td class="color28">28<br>Ni</td>
+            <td class="color29">29<br>Cu</td>
+            <td class="color30">30<br>Zn</td>
+            <td class="color31">31<br>Ga</td>
+            <td class="color32">32<br>Ge</td>
+            <td class="color33">33<br>As</td>
+            <td class="color34">34<br>Se</td>
+            <td class="color35">35<br>Br</td>
+            <td class="color36">36<br>Kr</td>
+        </tr>
+
+        <tr>
+            <td class="color37">37<br>Rb</td>
+            <td class="color38">38<br>Sr</td>
+            <td class="color39">39<br>Y</td>
+            <td class="color40">40<br>Zr</td>
+            <td class="color41">41<br>Nb</td>
+            <td class="color42">42<br>Mo</td>
+            <td class="color43">43<br>Tc</td>
+            <td class="color44">44<br>Ru</td>
+            <td class="color45">45<br>Rh</td>
+            <td class="color46">46<br>Pd</td>
+            <td class="color47">47<br>Ag</td>
+            <td class="color48">48<br>Cd</td>
+            <td class="color49">49<br>In</td>
+            <td class="color50">50<br>Sn</td>
+            <td class="color51">51<br>Sb</td>
+            <td class="color52">52<br>Te</td>
+            <td class="color53">53<br>I</td>
+            <td class="color54">54<br>Xe</td>
+        </tr>
+
+        <tr>
+            <td class="color55">55<br>Cs</td>
+            <td class="color56">56<br>Ba</td>
+            <td class="color57">57<br>La</td>
+            <td class="color58">58<br>Hf</td>
+            <td class="color59">59<br>Ta</td>
+            <td class="color60">60<br>W</td>
+            <td class="color61">61<br>Re</td>
+            <td class="color62">62<br>Os</td>
+            <td class="color63">63<br>Ir</td>
+            <td class="color64">64<br>Pt</td>
+            <td class="color65">65<br>Au</td>
+            <td class="color66">66<br>Hg</td>
+            <td class="color67">67<br>TI</td>
+            <td class="color68">68<br>Pb</td>
+            <td class="color69">69<br>Bi</td>
+            <td class="color70">70<br>Po</td>
+            <td class="color71">71<br>At</td>
+            <td class="color72">72<br>Rn</td>
+        </tr>
+        <br><br>
+
+        <tr>
+            <td class="color73">73<br>Fr</td>
+            <td class="color74">74<br>Ra</td>
+            <td class="color75">75<br>Ac</td>
+            <td class="color76">76<br>Rf</td>
+            <td class="color77">77<br>Db</td>
+            <td class="color78">78<br>Sg</td>
+            <td class="color79">79<br>Bh</td>
+            <td class="color80">80<br>Hs</td>
+            <td class="color81">81<br>Mt</td>
+            <td class="color82">82<br>Ds</td>
+            <td class="color83">83<br>Rg</td>
+            <td class="color84">84<br>Cn</td>
+            <td class="color85">85<br>Nh</td>
+            <td class="color86">86<br>FI</td>
+            <td class="color87">87<br>Mc</td>
+            <td class="color88">88<br>Lv</td>
+            <td class="color89">89<br>Ts</td>
+            <td class="color90">90<br>Og</td>
+        </tr>
+        <br><br>
+
+        <tr>
+            <td colspan="3"><br></td>
+            <td class="color91">91<br>Ce</td>
+            <td class="color92">92<br>Pr</td>
+            <td class="color93">93<br>Nd</td>
+            <td class="color94">94<br>Pm</td>
+            <td class="color95">95<br>Sm</td>
+            <td class="color96">96<br>Eu</td>
+            <td class="color97">97<br>Gd</td>
+            <td class="color98">98<br>Tb</td>
+            <td class="color99">99<br>Dy</td>
+            <td class="color100">100<br>Ho</td>
+            <td class="color101">101<br>Er</td>
+            <td class="color102">102<br>Tm</td>
+            <td class="color103">103<br>Yb</td>
+            <td class="color104">104<br>Lu</td>
+            <td colspan="1"><br></td>
+        </tr>
+        <br><br>
+
+        <tr>
+            <td colspan="3"><br></td>
+            <td class="color105">105<br>Th</td>
+            <td class="color106">106<br>Pa</td>
+            <td class="color107">107<br>U</td>
+            <td class="color108">108<br>Np</td>
+            <td class="color109">109<br>Pu</td>
+            <td class="color110">110<br>Am</td>
+            <td class="color111">111<br>Cm</td>
+            <td class="color112">112<br>Bk</td>
+            <td class="color113">113<br>Cf</td>
+            <td class="color114">114<br>Es</td>
+            <td class="color115">115<br>Fm</td>
+            <td class="color116">116<br>Md</td>
+            <td class="color117">117<br>No</td>
+            <td class="color118">118<br>Lr</td>
+            <td colspan="1"><br></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
